@@ -1,13 +1,11 @@
 import express from 'express';
 import { auth } from '../middleware/auth.js';
-import { router } from './users';
+import { all, add, remove, edit, employee } from '../controllers/employees.js';
 
-router.get('/', auth, () => {
-	console.log('get all');
-});
-router.get('/:id', auth, () => {
-	console.log('get user');
-});
-router.post('/:id', auth, () => {
-	console.log('get user');
-});
+export const routerEmployees = express.Router();
+
+routerEmployees.get('/', auth, all);
+routerEmployees.get('/:id', auth, employee);
+routerEmployees.post('/add', auth, add);
+routerEmployees.delete('/remove/:id', auth, remove);
+routerEmployees.put('/edit/:id', auth, edit);
