@@ -5,7 +5,9 @@
 	"type": "module",
 	"scripts": {
 		"start": "node ./bin/www.js",
-		"server": "nodemon ./bin/www.js"
+		"server": "nodemon ./bin/www.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"dependencies": {
 		"@prisma/client": "^4.16.0",
