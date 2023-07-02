@@ -25,7 +25,7 @@ export const employeesApi = api.injectEndpoints({
 		removeEmployee: builder.mutation<string, string>({
 			query: (id) => ({
 				url: `/employees/remove/${id}`,
-				method: 'POST',
+				method: 'Delete',
 				body: { id },
 			}),
 		}),
