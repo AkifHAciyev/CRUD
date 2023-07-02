@@ -13,7 +13,7 @@ const Register = () => {
 	return (
 		<Layout>
 			<Row align="middle" justify="center">
-				<Card title="Зарегистрируйтесь" style={{ width: '30rem' }}>
+				<Card title="Registration" style={{ width: '30rem' }}>
 					<Form onFinish={() => null}>
 						<CustomInput type="text" name="name" placeholder="Name" />
 						<CustomInput type="email" name="email" placeholder="Email" />

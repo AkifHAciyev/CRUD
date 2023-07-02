@@ -9,11 +9,12 @@ import { Paths } from './paths';
 import Login from './pages/login';
 import Register from './pages/register';
 import { ConfigProvider, theme } from 'antd';
+import Employees from './pages/employees';
 
 const router = createBrowserRouter([
 	{
 		path: Paths.home,
-		element: <h1>Employee</h1>,
+		element: <Employees />,
 	},
 	{
 		path: Paths.login,
